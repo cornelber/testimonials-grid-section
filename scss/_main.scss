@@ -1,0 +1,106 @@
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 60vw;
+  @media screen and (max-width: 1024px) {
+    width: 90vw;
+  }
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+  }
+  @media screen and (max-width: 530px) {
+    display: grid;
+    width: 90vw;
+    height: 100%;
+    grid-template-columns: 2fr 0 0 0;
+    grid-column-gap: 0;
+  }
+  .grid__group {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 10px 15px 40px -30px $very-dark-blackish-blue;
+    .profile_group {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .one {
+    background-color: $moderate-violet;
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    position: relative;
+    .bg_img {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      bottom: 0;
+      z-index: 1;
+    }
+    .profile_logo {
+      border: 2px solid hsl(263, 40%, 65%);
+    }
+    @media screen and (max-width: 530px) {
+    }
+  }
+  .two {
+    background-color: $very-dark-grayish-blue;
+    padding: 20px;
+    grid-auto-columns: 10%;
+    grid-auto-columns: 33.3%;
+    @media screen and (max-width: 530px) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+  }
+  .three {
+    background-color: $white;
+    padding: 20px;
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    h1 {
+      color: $very-dark-blackish-blue;
+    }
+    p {
+      color: $very-dark-blackish-blue;
+      opacity: 0.7;
+    }
+    @media screen and (max-width: 530px) {
+      grid-column-start: 1;
+      grid-row-start: 5;
+      grid-row-end: 5;
+    }
+  }
+  .four {
+    background-color: $white;
+    padding: 20px;
+    h1 {
+      color: $very-dark-blackish-blue;
+    }
+    p {
+      color: $very-dark-blackish-blue;
+      opacity: 0.7;
+    }
+    @media screen and (max-width: 530px) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+  }
+  .five {
+    background-color: $very-dark-blackish-blue;
+    padding: 20px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    .profile_logo {
+      border: 2px solid $moderate-violet;
+    }
+    @media screen and (max-width: 530px) {
+      grid-column-start: 1;
+      grid-row-start: 4;
+    }
+  }
+}
